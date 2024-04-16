@@ -82,6 +82,8 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -546,6 +548,8 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.textBox9);
+            this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.richTextBox1);
             this.panel6.Controls.Add(this.textBox8);
             this.panel6.Controls.Add(this.label10);
@@ -565,9 +569,9 @@
             // textBox8
             // 
             this.textBox8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox8.Location = new System.Drawing.Point(3, 546);
+            this.textBox8.Location = new System.Drawing.Point(3, 188);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(196, 33);
+            this.textBox8.Size = new System.Drawing.Size(193, 33);
             this.textBox8.TabIndex = 1;
             this.textBox8.Text = "0.00";
             this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -577,11 +581,32 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(51, 502);
+            this.label10.Location = new System.Drawing.Point(41, 164);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(99, 21);
+            this.label10.Size = new System.Drawing.Size(116, 21);
             this.label10.TabIndex = 0;
-            this.label10.Text = "MontoTotal";
+            this.label10.Text = "MontoTotalBs";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox9.Location = new System.Drawing.Point(3, 281);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(193, 33);
+            this.textBox9.TabIndex = 4;
+            this.textBox9.Text = "0.00";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(41, 257);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(115, 21);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "MontoTotal_$";
             // 
             // Form1
             // 
@@ -670,5 +695,7 @@
         private Button button2;
         private Button button3;
         private RichTextBox richTextBox1;
+        private TextBox textBox9;
+        private Label label11;
     }
 }

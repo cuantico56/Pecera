@@ -83,6 +83,7 @@ namespace Pecera
                         connection.Close();
                         connection.Dispose();
                         textBox8.Text = "0.00";
+                        textBox9.Text = "0.00";
                         MontoTotal = 0.00m;
                         TablaTotal.Clear();
                         ListadoVentas.Clear();
@@ -163,6 +164,9 @@ namespace Pecera
                             //connection.Dispose();
                             textBox7.Text = "1";
                             textBox8.Text = MontoTotal.ToString();
+                            textBox9.Text = (MontoTotal / tasa).ToString("F2");
+                               
+
 
                             richTextBox1.Text = ListadoUpdate.Count.ToString();
 
@@ -408,6 +412,7 @@ namespace Pecera
             dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
             textBox8.Text = "0.00";
+            textBox9.Text = "0.00";
             MontoTotal = 0.00m;
             TablaTotal.Clear();
             ListadoVentas.Clear();
@@ -525,6 +530,7 @@ namespace Pecera
                         ListadoUpdate.RemoveAt(rowNumber);
                         richTextBox1.Text = ListadoUpdate.Count.ToString();
                         textBox8.Text = MontoTotal.ToString("F2");
+                        textBox9.Text = (MontoTotal/tasa).ToString("F2");
 
                         // ... (Opcional) Realizar acciones adicionales después de la eliminación ...
                     }
