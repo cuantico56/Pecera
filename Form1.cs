@@ -109,7 +109,6 @@ namespace Pecera
                                 ventas.Id_ventas = Convert.ToInt32(row["ID"])+45;
                                 ventas.Usuario = 1;
                                 ventas.Producto = (string)row["nombre"];
-                                ventas.Cantidad = (decimal)row["cantidad"];
                                 ventas.Cantidad = Convert.ToDecimal(textBox7.Text);
                                 ventas.Precio = (decimal)row["precio"];
                                 ventas.Tasa = tasa;
