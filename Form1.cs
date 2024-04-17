@@ -12,6 +12,9 @@ namespace Pecera
         public decimal tasa = 0.00m;
         public DataTable TablaTotal = new DataTable();
         public decimal MontoTotal;
+        public decimal MontoTotalMoneda;
+        public decimal VueltoEnBolivares;
+        public decimal VueltoEnDolares;
         public List<Ventas> ListadoVentas=new List<Ventas>();
         public List<UpdateInv> ListadoUpdate = new List<UpdateInv>();
         public Inventario producto = new Inventario();
@@ -58,7 +61,7 @@ namespace Pecera
             }
             this.Text = "Usuario:  Robert";
             CantidadAgregar = producto.Cantidad;
-
+            label16.Text=tasa.ToString()+"_Bs/$";
 
         }
 
@@ -85,6 +88,7 @@ namespace Pecera
                         textBox8.Text = "0.00";
                         textBox9.Text = "0.00";
                         MontoTotal = 0.00m;
+                        MontoTotalMoneda= 0.00m;
                         TablaTotal.Clear();
                         ListadoVentas.Clear();
                         ListadoUpdate.Clear();
@@ -115,7 +119,9 @@ namespace Pecera
                                 ventas.Total = (decimal)row["precio"] * ventas.Cantidad;
                                 ListadoVentas.Add(ventas);  
                                 MontoTotal = MontoTotal + ventas.Total;
+                                MontoTotalMoneda = MontoTotal / tasa;
                                 MontoTotal = Math.Round(MontoTotal, 2);
+                                MontoTotalMoneda = Math.Round(MontoTotalMoneda, 2);
                                 DataRow filanueva = TablaTotal.NewRow();
                                 filanueva["id"] = Convert.ToInt32(row["ID"]);
                                 filanueva["nombre"] = (string)row["nombre"];
@@ -163,11 +169,10 @@ namespace Pecera
                             //connection.Dispose();
                             textBox7.Text = "1";
                             textBox8.Text = MontoTotal.ToString();
-                            textBox9.Text = (MontoTotal / tasa).ToString("F2");
+                            textBox9.Text = MontoTotalMoneda.ToString("F2");
                                
 
 
-                            richTextBox1.Text = ListadoUpdate.Count.ToString();
 
                             
 
@@ -185,7 +190,7 @@ namespace Pecera
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al conectar a la base de datos: " + ex.Message);
-                    richTextBox1.Text= ex.Message.ToString();  
+                   
                 }
                 finally
                 {
@@ -412,7 +417,12 @@ namespace Pecera
             dataGridView1.Rows.Clear();
             textBox8.Text = "0.00";
             textBox9.Text = "0.00";
+            textBox10.Text = "0.00";
+            textBox11.Text = "0.00";
+            textBox12.Text = "0.00";
+            textBox13.Text = "0.00";
             MontoTotal = 0.00m;
+            MontoTotalMoneda= 0.00m;
             TablaTotal.Clear();
             ListadoVentas.Clear();
             ListadoUpdate.Clear();
@@ -482,6 +492,10 @@ namespace Pecera
                 ListadoUpdate.Clear();
                 ListadoVentas.Clear();
                 MontoTotal = 0.00m;
+                MontoTotalMoneda= 0.00m;
+                textBox10.Text = "0.00";
+                textBox11.Text = "0.00";
+
                 label8.Text = "Venta exitosa";
                 timer1.Enabled = true;
                 timer1.Start();
@@ -524,17 +538,61 @@ namespace Pecera
                     {
                         // Eliminar la fila si el usuario confirma
                         MontoTotal = MontoTotal - ListadoVentas[rowNumber].Precio * ListadoVentas[rowNumber].Cantidad;
+                        MontoTotalMoneda = MontoTotal / tasa;
                         dataGridView1.Rows.RemoveAt(rowNumber);
                         ListadoVentas.RemoveAt(rowNumber);
-                        ListadoUpdate.RemoveAt(rowNumber);
-                        richTextBox1.Text = ListadoUpdate.Count.ToString();
                         textBox8.Text = MontoTotal.ToString("F2");
-                        textBox9.Text = (MontoTotal/tasa).ToString("F2");
+                        textBox9.Text = MontoTotalMoneda.ToString("F2");
 
                         // ... (Opcional) Realizar acciones adicionales después de la eliminación ...
                     }
                 }
             }
+
+        }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                VueltoEnBolivares = Convert.ToDecimal(textBox10.Text);
+                VueltoEnDolares = Convert.ToDecimal(textBox11.Text);
+
+                if (MontoTotal<= VueltoEnBolivares+(VueltoEnDolares*tasa) & radioButton1.Checked==true)
+                {
+                    textBox12.Text = (VueltoEnBolivares + (VueltoEnDolares * tasa)-MontoTotal).ToString("F2");
+                    textBox13.Text = "0.00";
+             
+                }
+                if (MontoTotal <= VueltoEnBolivares + (VueltoEnDolares * tasa) & radioButton2.Checked == true)
+                {
+                   
+                    textBox12.Text = "0.00";
+                    textBox13.Text = ((VueltoEnBolivares + (VueltoEnDolares * tasa) - MontoTotal) / tasa).ToString("F2");
+
+                }
+                if (MontoTotal <= VueltoEnBolivares + (VueltoEnDolares * tasa) & radioButton3.Checked == true)
+                {
+
+                    textBox12.Text = ((VueltoEnBolivares + (VueltoEnDolares * tasa) - MontoTotal)/2).ToString("F2");
+                    textBox13.Text = (((VueltoEnBolivares + (VueltoEnDolares * tasa) - MontoTotal) / 2)/tasa).ToString("F2");
+
+                }
+
+
+
+
+
+
+            }
+        }
+
+        private void textBox10_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            textBox10.Text = "0.00";
+            textBox11.Text = "0.00";
+            textBox12.Text = "0.00";
+            textBox13.Text = "0.00";
 
         }
     }
