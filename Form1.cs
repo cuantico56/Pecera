@@ -13,8 +13,8 @@ namespace Pecera
         public DataTable TablaTotal = new DataTable();
         public decimal MontoTotal;
         public decimal MontoTotalMoneda;
-        public decimal VueltoEnBolivares;
-        public decimal VueltoEnDolares;
+        public decimal PagoEnBolivares;
+        public decimal PagoEnDolares;
         public List<Ventas> ListadoVentas=new List<Ventas>();
         public List<UpdateInv> ListadoUpdate = new List<UpdateInv>();
         public Inventario producto = new Inventario();
@@ -555,27 +555,27 @@ namespace Pecera
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                VueltoEnBolivares = Convert.ToDecimal(textBox10.Text);
-                VueltoEnDolares = Convert.ToDecimal(textBox11.Text);
+                PagoEnBolivares = Convert.ToDecimal(textBox10.Text);
+                PagoEnDolares = Convert.ToDecimal(textBox11.Text);
 
-                if (MontoTotal<= VueltoEnBolivares+(VueltoEnDolares*tasa) & radioButton1.Checked==true)
+                if (MontoTotal<= PagoEnBolivares+(PagoEnDolares * tasa) & radioButton1.Checked==true)
                 {
-                    textBox12.Text = (VueltoEnBolivares + (VueltoEnDolares * tasa)-MontoTotal).ToString("F2");
+                    textBox12.Text = (PagoEnBolivares + (PagoEnDolares * tasa)-MontoTotal).ToString("F2");
                     textBox13.Text = "0.00";
              
                 }
-                if (MontoTotal <= VueltoEnBolivares + (VueltoEnDolares * tasa) & radioButton2.Checked == true)
+                if (MontoTotal <= PagoEnBolivares + (PagoEnDolares * tasa) & radioButton2.Checked == true)
                 {
                    
                     textBox12.Text = "0.00";
-                    textBox13.Text = ((VueltoEnBolivares + (VueltoEnDolares * tasa) - MontoTotal) / tasa).ToString("F2");
+                    textBox13.Text = ((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal) / tasa).ToString("F2");
 
                 }
-                if (MontoTotal <= VueltoEnBolivares + (VueltoEnDolares * tasa) & radioButton3.Checked == true)
+                if (MontoTotal <= PagoEnBolivares + (PagoEnDolares * tasa) & radioButton3.Checked == true)
                 {
 
-                    textBox12.Text = ((VueltoEnBolivares + (VueltoEnDolares * tasa) - MontoTotal)/2).ToString("F2");
-                    textBox13.Text = (((VueltoEnBolivares + (VueltoEnDolares * tasa) - MontoTotal) / 2)/tasa).ToString("F2");
+                    textBox12.Text = ((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal)/2).ToString("F2");
+                    textBox13.Text = (((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal) / 2)/tasa).ToString("F2");
 
                 }
 
@@ -594,6 +594,23 @@ namespace Pecera
             textBox12.Text = "0.00";
             textBox13.Text = "0.00";
 
+        }
+
+        private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter || radioButton3.Checked==true)
+            {
+
+
+
+
+
+
+
+
+
+
+            }
         }
     }
 }

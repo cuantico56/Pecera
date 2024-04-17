@@ -617,6 +617,7 @@
             this.textBox12.TabIndex = 12;
             this.textBox12.Text = "0.00";
             this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox12_KeyPress);
             // 
             // label14
             // 
@@ -648,6 +649,7 @@
             this.textBox13.TabIndex = 10;
             this.textBox13.Text = "0.00";
             this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox12_KeyPress);
             // 
             // label17
             // 
