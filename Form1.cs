@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Pecera
 {
-    public partial class Form1 : Form,IContract
+    public partial class Form1 : Form, IContract
     {
 
         public decimal tasa = 0.00m;
@@ -15,11 +15,11 @@ namespace Pecera
         public decimal MontoTotalMoneda;
         public decimal PagoEnBolivares;
         public decimal PagoEnDolares;
-        public List<Ventas> ListadoVentas=new List<Ventas>();
+        public List<Ventas> ListadoVentas = new List<Ventas>();
         public List<UpdateInv> ListadoUpdate = new List<UpdateInv>();
         public Inventario producto = new Inventario();
         public decimal CantidadAgregar { get; set; }
-       
+
 
 
 
@@ -29,7 +29,7 @@ namespace Pecera
 
         public Form1()
         {
-            
+
             InitializeComponent();
             TablaTotal.Columns.Add("id", typeof(int));
             TablaTotal.Columns.Add("nombre", typeof(string));
@@ -61,38 +61,38 @@ namespace Pecera
             }
             this.Text = "Usuario:  Robert";
             CantidadAgregar = producto.Cantidad;
-            label16.Text=tasa.ToString()+"_Bs/$";
+            label16.Text = tasa.ToString() + "_Bs/$";
 
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
-            Ventas ventas= new Ventas();
+
+            Ventas ventas = new Ventas();
             if (e.KeyChar == (char)Keys.Enter)
             {
                 string connectionString = "server=localhost;database=Pecera;user=root;password=";
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 try
                 {
-                   
+
                     if (textBox1.Text == "")  //Esto sirve para listar el contenido
                     {
                         string query = "SELECT id,nombre,descripcion,cantidad,precio,cod_barra,activo,FechaIngreso FROM inventario LIMIT 17;";
                         MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
                         DataTable table = new DataTable();
                         adapter.Fill(table);
-                        dataGridView1.DataSource = table;                       
+                        dataGridView1.DataSource = table;
                         connection.Close();
                         connection.Dispose();
                         textBox8.Text = "0.00";
                         textBox9.Text = "0.00";
                         MontoTotal = 0.00m;
-                        MontoTotalMoneda= 0.00m;
+                        MontoTotalMoneda = 0.00m;
                         TablaTotal.Clear();
                         ListadoVentas.Clear();
                         ListadoUpdate.Clear();
-                        
+
 
 
                     }
@@ -101,7 +101,7 @@ namespace Pecera
                     {
                         string query = "SELECT id,nombre,descripcion,cantidad,precio,cod_barra,activo,FechaIngreso FROM inventario WHERE cod_barra=" + textBox1.Text + ";";
                         MySqlDataAdapter adapter = new MySqlDataAdapter(query, connection);
-                        DataTable table = new DataTable();                       
+                        DataTable table = new DataTable();
                         adapter.Fill(table);
                         if (table.Rows.Count > 0)
                         {
@@ -109,15 +109,15 @@ namespace Pecera
                             foreach (DataRow row in table.Rows)
                             {
                                 // Cambia el valor de la columna "cantidad" aquí. Por ejemplo, incrementamos en 1.
-                                ventas.Id= Convert.ToInt32(row["ID"]);
-                                ventas.Id_ventas = Convert.ToInt32(row["ID"])+45;
+                                ventas.Id = Convert.ToInt32(row["ID"]);
+                                ventas.Id_ventas = Convert.ToInt32(row["ID"]) + 45;
                                 ventas.Usuario = 1;
                                 ventas.Producto = (string)row["nombre"];
                                 ventas.Cantidad = Convert.ToDecimal(textBox7.Text);
                                 ventas.Precio = (decimal)row["precio"];
                                 ventas.Tasa = tasa;
                                 ventas.Total = (decimal)row["precio"] * ventas.Cantidad;
-                                ListadoVentas.Add(ventas);  
+                                ListadoVentas.Add(ventas);
                                 MontoTotal = MontoTotal + ventas.Total;
                                 MontoTotalMoneda = MontoTotal / tasa;
                                 MontoTotal = Math.Round(MontoTotal, 2);
@@ -128,18 +128,19 @@ namespace Pecera
                                 filanueva["descripcion"] = (string)row["descripcion"];
                                 filanueva["cantidad"] = Convert.ToDecimal(textBox7.Text);
                                 filanueva["precio"] = (decimal)row["precio"];
-                                filanueva["TotalItem"] = (decimal)row["precio"]* Convert.ToDecimal(textBox7.Text);
+                                filanueva["TotalItem"] = (decimal)row["precio"] * Convert.ToDecimal(textBox7.Text);
                                 filanueva["cod_barra"] = (string)row["cod_barra"];
                                 filanueva["activo"] = true;
                                 filanueva["fechaingreso"] = (DateTime)row["FechaIngreso"];
-                                TablaTotal.Rows.Add(filanueva); 
+                                TablaTotal.Rows.Add(filanueva);
 
                                 //TablaTotal.Rows.Add(inventario);
 
 
 
 
-                                if (Convert.ToDecimal(row["cantidad"]) == 0) {
+                                if (Convert.ToDecimal(row["cantidad"]) == 0)
+                                {
 
                                     MessageBox.Show("NO quedan mas productos de este");
                                     break;
@@ -147,16 +148,16 @@ namespace Pecera
                                 else
                                 {
                                     row["cantidad"] = Convert.ToDecimal(row["cantidad"]) - Convert.ToDecimal(textBox7.Text);
-                                   nuvup = new UpdateInv()
+                                    nuvup = new UpdateInv()
                                     {
-                                        Id= ventas.Id,
+                                        Id = ventas.Id,
                                         Cantidad = Convert.ToDecimal(row["cantidad"])
 
-                                     };
+                                    };
                                     ListadoUpdate.Add(nuvup);
                                 }
                             }
-                            
+
                             dataGridView1.DataSource = TablaTotal;
 
 
@@ -170,11 +171,11 @@ namespace Pecera
                             textBox7.Text = "1";
                             textBox8.Text = MontoTotal.ToString();
                             textBox9.Text = MontoTotalMoneda.ToString("F2");
-                               
 
 
 
-                            
+
+
 
                         }
                         else
@@ -190,7 +191,7 @@ namespace Pecera
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al conectar a la base de datos: " + ex.Message);
-                   
+
                 }
                 finally
                 {
@@ -214,8 +215,8 @@ namespace Pecera
             panel3.BackColor = SystemColors.Window;
             dataGridView1.Visible = false;
             label1.Visible = false;
-            textBox1.Visible=false;           
-            textBox2.Visible=true;
+            textBox1.Visible = false;
+            textBox2.Visible = true;
             textBox3.Visible = true;
             textBox4.Visible = true;
             textBox5.Visible = true;
@@ -231,7 +232,7 @@ namespace Pecera
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dataGridView1.Visible= true;
+            dataGridView1.Visible = true;
             label1.Visible = true;
             textBox1.Visible = true;
             textBox2.Visible = false;
@@ -264,7 +265,7 @@ namespace Pecera
                         {
                             while (reader.Read())
                             {
-                                producto.Id= reader.GetInt32(0);
+                                producto.Id = reader.GetInt32(0);
                                 producto.Nombre = reader["Nombre"].ToString();
                                 producto.Descripcion = reader["Descripcion"].ToString();
                                 producto.Cantidad = Convert.ToInt32(reader["Cantidad"]);
@@ -272,26 +273,26 @@ namespace Pecera
                                 producto.Cod_Barra = reader["Cod_Barra"].ToString();
                                 producto.Activo = Convert.ToBoolean(reader["Activo"]);
                                 producto.FechaIngreso = Convert.ToDateTime(reader["FechaIngreso"]);
-                           
+
                             }
                         }
                     }
                     connection.Close();
                     connection.Dispose();
-                    if(producto.Id == 0)
+                    if (producto.Id == 0)
                     {
-                     var resp = MessageBox.Show("¿Desea crear el producto?", "NO EXISTE",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Exclamation);
-                        
-                        if(resp== DialogResult.Yes) 
+                        var resp = MessageBox.Show("¿Desea crear el producto?", "NO EXISTE", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Exclamation);
+
+                        if (resp == DialogResult.Yes)
                         {
 
-                            button1_Click( sender,  e);
+                            button1_Click(sender, e);
 
 
 
 
                         }
-                        
+
                     }
                     else
                     {
@@ -300,11 +301,11 @@ namespace Pecera
                         textBox4.Text = producto.Descripcion;
                         textBox5.Text = producto.Cantidad.ToString();
                         textBox6.Text = producto.Precio.ToString();
-                        CantidadAgregar = producto.Cantidad;                       
+                        CantidadAgregar = producto.Cantidad;
                         Form3 form3 = new Form3(producto);
                         AddOwnedForm(form3);
                         form3.textBox1.Text = this.textBox5.Text;
-                        form3.contrato = this;               
+                        form3.contrato = this;
                         form3.Show();
 
                     }
@@ -358,14 +359,14 @@ namespace Pecera
                     connection.Close();
                     connection.Dispose();
                     System.Media.SystemSounds.Exclamation.Play();
-                    label8.Visible= true;
+                    label8.Visible = true;
                     label8.Text = "Producto cargado Exitoso";
                     textBox2.Text = "";
                     textBox3.Text = "";
                     textBox4.Text = "";
                     textBox5.Text = "";
                     textBox6.Text = "";
-                    timer1.Enabled= true;
+                    timer1.Enabled = true;
                     timer1.Start();
 
 
@@ -378,7 +379,7 @@ namespace Pecera
             catch (Exception x)
             {
 
-                MessageBox.Show("Error, producto existe"+x);
+                MessageBox.Show("Error, producto existe" + x);
             }
 
         }
@@ -422,7 +423,7 @@ namespace Pecera
             textBox12.Text = "0.00";
             textBox13.Text = "0.00";
             MontoTotal = 0.00m;
-            MontoTotalMoneda= 0.00m;
+            MontoTotalMoneda = 0.00m;
             TablaTotal.Clear();
             ListadoVentas.Clear();
             ListadoUpdate.Clear();
@@ -439,7 +440,7 @@ namespace Pecera
             string connectionString = "server=localhost;database=Pecera;user=root;password=";
             MySqlConnection connection2 = new MySqlConnection(connectionString);
 
-            if (ListadoVentas.Count != 0 & ListadoUpdate.Count!=0)
+            if (ListadoVentas.Count != 0 & ListadoUpdate.Count != 0)
             {
                 foreach (var ventas in ListadoVentas)
                 {
@@ -458,13 +459,13 @@ namespace Pecera
                     connection2.Open();
                     command2.ExecuteNonQuery();
                     connection2.Close();
-                    
+
 
                 }
                 connection2.Dispose();
 
                 // Establecer conexión a MySQL
-                
+
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
@@ -492,7 +493,7 @@ namespace Pecera
                 ListadoUpdate.Clear();
                 ListadoVentas.Clear();
                 MontoTotal = 0.00m;
-                MontoTotalMoneda= 0.00m;
+                MontoTotalMoneda = 0.00m;
                 textBox10.Text = "0.00";
                 textBox11.Text = "0.00";
 
@@ -514,7 +515,7 @@ namespace Pecera
             int cant2 = int.Parse(texto);
             textBox5.Text = (cant1 + cant2).ToString();
 
-               
+
         }
 
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
@@ -534,7 +535,7 @@ namespace Pecera
                         MessageBoxIcon.Question
                     );
 
-                    if (result == DialogResult.Yes & ListadoVentas.Count>0 & ListadoUpdate.Count>0)
+                    if (result == DialogResult.Yes & ListadoVentas.Count > 0 & ListadoUpdate.Count > 0)
                     {
                         // Eliminar la fila si el usuario confirma
                         MontoTotal = MontoTotal - ListadoVentas[rowNumber].Precio * ListadoVentas[rowNumber].Cantidad;
@@ -558,15 +559,15 @@ namespace Pecera
                 PagoEnBolivares = Convert.ToDecimal(textBox10.Text);
                 PagoEnDolares = Convert.ToDecimal(textBox11.Text);
 
-                if (MontoTotal<= PagoEnBolivares+(PagoEnDolares * tasa) & radioButton1.Checked==true)
+                if (MontoTotal <= PagoEnBolivares + (PagoEnDolares * tasa) & radioButton1.Checked == true)
                 {
-                    textBox12.Text = (PagoEnBolivares + (PagoEnDolares * tasa)-MontoTotal).ToString("F2");
+                    textBox12.Text = (PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal).ToString("F2");
                     textBox13.Text = "0.00";
-             
+
                 }
                 if (MontoTotal <= PagoEnBolivares + (PagoEnDolares * tasa) & radioButton2.Checked == true)
                 {
-                   
+
                     textBox12.Text = "0.00";
                     textBox13.Text = ((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal) / tasa).ToString("F2");
 
@@ -574,8 +575,8 @@ namespace Pecera
                 if (MontoTotal <= PagoEnBolivares + (PagoEnDolares * tasa) & radioButton3.Checked == true)
                 {
 
-                    textBox12.Text = ((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal)/2).ToString("F2");
-                    textBox13.Text = (((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal) / 2)/tasa).ToString("F2");
+                    textBox12.Text = ((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal) / 2).ToString("F2");
+                    textBox13.Text = (((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal) / 2) / tasa).ToString("F2");
 
                 }
 
@@ -598,16 +599,25 @@ namespace Pecera
 
         private void textBox12_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter || radioButton3.Checked==true)
+            if (e.KeyChar == (char)Keys.Enter & radioButton3.Checked == true)
             {
 
+                decimal residuo = PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal - Convert.ToDecimal(textBox12.Text);
+
+                textBox13.Text = (residuo / tasa).ToString("F2");
 
 
+            }
+        }
 
+        private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter & radioButton3.Checked == true)
+            {
 
+                decimal residuo = PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal - (Convert.ToDecimal(textBox13.Text)*tasa);
 
-
-
+                textBox12.Text = residuo.ToString("F2");
 
 
             }
