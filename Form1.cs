@@ -31,15 +31,15 @@ namespace Pecera
         {
 
             InitializeComponent();
-            TablaTotal.Columns.Add("id", typeof(int));
-            TablaTotal.Columns.Add("nombre", typeof(string));
-            TablaTotal.Columns.Add("descripcion", typeof(string));
-            TablaTotal.Columns.Add("cantidad", typeof(decimal));
-            TablaTotal.Columns.Add("precio", typeof(decimal));
-            TablaTotal.Columns.Add("TotalItem", typeof(decimal));
-            TablaTotal.Columns.Add("cod_barra", typeof(string));
-            TablaTotal.Columns.Add("activo", typeof(bool));
-            TablaTotal.Columns.Add("fechaingreso", typeof(DateTime));
+            //TablaTotal.Columns.Add("ID", typeof(int));
+            TablaTotal.Columns.Add("NOMBRE", typeof(string));
+            //TablaTotal.Columns.Add("DESCRIPCION", typeof(string));
+            TablaTotal.Columns.Add("CANTIDAD", typeof(decimal));
+            TablaTotal.Columns.Add("PRECIO", typeof(decimal));
+            TablaTotal.Columns.Add("TOTALITEM", typeof(decimal));
+            TablaTotal.Columns.Add("COD_BARRA", typeof(string));
+            TablaTotal.Columns.Add("ACTIVO", typeof(bool));
+            TablaTotal.Columns.Add("FECHAINGRESO", typeof(DateTime));
             string connectionString = "server=localhost;database=Pecera;user=root;password=";
             string query = "SELECT tasa FROM cambio;";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -123,9 +123,9 @@ namespace Pecera
                                 MontoTotal = Math.Round(MontoTotal, 2);
                                 MontoTotalMoneda = Math.Round(MontoTotalMoneda, 2);
                                 DataRow filanueva = TablaTotal.NewRow();
-                                filanueva["id"] = Convert.ToInt32(row["ID"]);
+                                //filanueva["id"] = Convert.ToInt32(row["ID"]);
                                 filanueva["nombre"] = (string)row["nombre"];
-                                filanueva["descripcion"] = (string)row["descripcion"];
+                                //filanueva["descripcion"] = (string)row["descripcion"];
                                 filanueva["cantidad"] = Convert.ToDecimal(textBox7.Text);
                                 filanueva["precio"] = (decimal)row["precio"];
                                 filanueva["TotalItem"] = (decimal)row["precio"] * Convert.ToDecimal(textBox7.Text);
@@ -226,6 +226,8 @@ namespace Pecera
             label4.Visible = true;
             label5.Visible = true;
             label6.Visible = true;
+            label7.Visible = true;
+            pictureBox2.Visible = true;
             button1.Visible = true;
 
         }
@@ -245,6 +247,8 @@ namespace Pecera
             label4.Visible = false;
             label5.Visible = false;
             label6.Visible = false;
+            label7.Visible = false;
+            pictureBox2.Visible = false;
             button1.Visible = false;
 
         }
@@ -404,13 +408,7 @@ namespace Pecera
 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            timer1.Stop();
-            label8.Text = "";
-            textBox1.Text = "";
 
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -581,10 +579,6 @@ namespace Pecera
                 }
 
 
-
-
-
-
             }
         }
 
@@ -622,5 +616,57 @@ namespace Pecera
 
             }
         }
+
+        public void CalcularPagos()
+        {
+            PagoEnBolivares = Convert.ToDecimal(textBox10.Text);
+            PagoEnDolares = Convert.ToDecimal(textBox11.Text);
+
+            if (MontoTotal <= PagoEnBolivares + (PagoEnDolares * tasa) & radioButton1.Checked == true)
+            {
+                textBox12.Text = (PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal).ToString("F2");
+                textBox13.Text = "0.00";
+
+            }
+            if (MontoTotal <= PagoEnBolivares + (PagoEnDolares * tasa) & radioButton2.Checked == true)
+            {
+
+                textBox12.Text = "0.00";
+                textBox13.Text = ((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal) / tasa).ToString("F2");
+
+            }
+            if (MontoTotal <= PagoEnBolivares + (PagoEnDolares * tasa) & radioButton3.Checked == true)
+            {
+
+                textBox12.Text = ((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal) / 2).ToString("F2");
+                textBox13.Text = (((PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal) / 2) / tasa).ToString("F2");
+
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            CalcularPagos();
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            CalcularPagos();
+        }
+
+        private void radioButton3_CheckedChanged(object sender, EventArgs e)
+        {
+            CalcularPagos();
+        }
+
+            private void timer1_Tick(object sender, EventArgs e)
+            {
+                timer1.Stop();
+                label8.Text = "";
+                textBox1.Text = "";
+
+            }
+
+
     }
 }

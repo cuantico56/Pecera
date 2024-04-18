@@ -28,794 +28,814 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            panel1 = new Panel();
-            menuStrip1 = new MenuStrip();
-            crearToolStripMenuItem = new ToolStripMenuItem();
-            productosToolStripMenuItem = new ToolStripMenuItem();
-            ingresarToolStripMenuItem = new ToolStripMenuItem();
-            archivoToolStripMenuItem = new ToolStripMenuItem();
-            nuevoToolStripMenuItem = new ToolStripMenuItem();
-            abrirToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator = new ToolStripSeparator();
-            guardarToolStripMenuItem = new ToolStripMenuItem();
-            guardarcomoToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator1 = new ToolStripSeparator();
-            imprimirToolStripMenuItem = new ToolStripMenuItem();
-            vistapreviadeimpresiónToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator2 = new ToolStripSeparator();
-            salirToolStripMenuItem = new ToolStripMenuItem();
-            ususariosToolStripMenuItem = new ToolStripMenuItem();
-            panel2 = new Panel();
-            panel3 = new Panel();
-            label4 = new Label();
-            button1 = new Button();
-            textBox4 = new TextBox();
-            label3 = new Label();
-            textBox6 = new TextBox();
-            textBox3 = new TextBox();
-            label2 = new Label();
-            label6 = new Label();
-            textBox2 = new TextBox();
-            label7 = new Label();
-            pictureBox2 = new PictureBox();
-            textBox5 = new TextBox();
-            label5 = new Label();
-            dataGridView1 = new DataGridView();
-            panel4 = new Panel();
-            pictureBox1 = new PictureBox();
-            panel5 = new Panel();
-            button3 = new Button();
-            button2 = new Button();
-            label9 = new Label();
-            textBox7 = new TextBox();
-            label8 = new Label();
-            label1 = new Label();
-            textBox1 = new TextBox();
-            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            errorProvider1 = new ErrorProvider(components);
-            timer1 = new System.Windows.Forms.Timer(components);
-            panel6 = new Panel();
-            groupBox1 = new GroupBox();
-            label19 = new Label();
-            textBox12 = new TextBox();
-            label14 = new Label();
-            label18 = new Label();
-            textBox13 = new TextBox();
-            label17 = new Label();
-            label15 = new Label();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            textBox11 = new TextBox();
-            label13 = new Label();
-            radioButton1 = new RadioButton();
-            textBox10 = new TextBox();
-            label12 = new Label();
-            label16 = new Label();
-            textBox9 = new TextBox();
-            label11 = new Label();
-            textBox8 = new TextBox();
-            label10 = new Label();
-            panel1.SuspendLayout();
-            menuStrip1.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
-            panel6.SuspendLayout();
-            groupBox1.SuspendLayout();
-            SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.crearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarcomoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.imprimirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vistapreviadeimpresiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ususariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.panel6.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(menuStrip1);
-            panel1.Location = new Point(107, 5);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(686, 68);
-            panel1.TabIndex = 0;
+            this.panel1.Controls.Add(this.menuStrip1);
+            this.panel1.Location = new System.Drawing.Point(107, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(686, 68);
+            this.panel1.TabIndex = 0;
             // 
             // menuStrip1
             // 
-            menuStrip1.Dock = DockStyle.Fill;
-            menuStrip1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            menuStrip1.GripStyle = ToolStripGripStyle.Visible;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { crearToolStripMenuItem, productosToolStripMenuItem, ingresarToolStripMenuItem, archivoToolStripMenuItem, ususariosToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.RenderMode = ToolStripRenderMode.Professional;
-            menuStrip1.Size = new Size(686, 68);
-            menuStrip1.TabIndex = 0;
-            menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.menuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearToolStripMenuItem,
+            this.productosToolStripMenuItem,
+            this.ingresarToolStripMenuItem,
+            this.archivoToolStripMenuItem,
+            this.ususariosToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(686, 68);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
             // 
             // crearToolStripMenuItem
             // 
-            crearToolStripMenuItem.Image = Properties.Resources.ICONOS_PRESENTACIÓN_34;
-            crearToolStripMenuItem.Name = "crearToolStripMenuItem";
-            crearToolStripMenuItem.Size = new Size(100, 64);
-            crearToolStripMenuItem.Text = "Ingresar";
-            crearToolStripMenuItem.Click += crearToolStripMenuItem_Click;
+            this.crearToolStripMenuItem.Image = global::Pecera.Properties.Resources.ICONOS_PRESENTACIÓN_34;
+            this.crearToolStripMenuItem.Name = "crearToolStripMenuItem";
+            this.crearToolStripMenuItem.Size = new System.Drawing.Size(100, 64);
+            this.crearToolStripMenuItem.Text = "Ingresar";
+            this.crearToolStripMenuItem.Click += new System.EventHandler(this.crearToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
-            productosToolStripMenuItem.Image = Properties.Resources.ICONOS_PRESENTACIÓN_36;
-            productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            productosToolStripMenuItem.Size = new Size(115, 64);
-            productosToolStripMenuItem.Text = "Productos";
-            productosToolStripMenuItem.Click += productosToolStripMenuItem_Click;
+            this.productosToolStripMenuItem.Image = global::Pecera.Properties.Resources.ICONOS_PRESENTACIÓN_36;
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(115, 64);
+            this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // ingresarToolStripMenuItem
             // 
-            ingresarToolStripMenuItem.Image = Properties.Resources.ICONOS_PRESENTACIÓN_35;
-            ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
-            ingresarToolStripMenuItem.Size = new Size(83, 64);
-            ingresarToolStripMenuItem.Text = "Editar";
-            ingresarToolStripMenuItem.Click += ingresarToolStripMenuItem_Click;
+            this.ingresarToolStripMenuItem.Image = global::Pecera.Properties.Resources.ICONOS_PRESENTACIÓN_35;
+            this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
+            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(83, 64);
+            this.ingresarToolStripMenuItem.Text = "Editar";
+            this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // archivoToolStripMenuItem
             // 
-            archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevoToolStripMenuItem, abrirToolStripMenuItem, toolStripSeparator, guardarToolStripMenuItem, guardarcomoToolStripMenuItem, toolStripSeparator1, imprimirToolStripMenuItem, vistapreviadeimpresiónToolStripMenuItem, toolStripSeparator2, salirToolStripMenuItem });
-            archivoToolStripMenuItem.Image = Properties.Resources.ICONOS_PRESENTACIÓN_16;
-            archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            archivoToolStripMenuItem.Size = new Size(112, 64);
-            archivoToolStripMenuItem.Text = "&Imagenes";
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoToolStripMenuItem,
+            this.abrirToolStripMenuItem,
+            this.toolStripSeparator,
+            this.guardarToolStripMenuItem,
+            this.guardarcomoToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.imprimirToolStripMenuItem,
+            this.vistapreviadeimpresiónToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.salirToolStripMenuItem});
+            this.archivoToolStripMenuItem.Image = global::Pecera.Properties.Resources.ICONOS_PRESENTACIÓN_16;
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(112, 64);
+            this.archivoToolStripMenuItem.Text = "&Imagenes";
             // 
             // nuevoToolStripMenuItem
             // 
-            nuevoToolStripMenuItem.Image = (Image)resources.GetObject("nuevoToolStripMenuItem.Image");
-            nuevoToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            nuevoToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.N;
-            nuevoToolStripMenuItem.Size = new Size(274, 26);
-            nuevoToolStripMenuItem.Text = "&Nuevo";
+            this.nuevoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nuevoToolStripMenuItem.Image")));
+            this.nuevoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
+            this.nuevoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.nuevoToolStripMenuItem.Text = "&Nuevo";
             // 
             // abrirToolStripMenuItem
             // 
-            abrirToolStripMenuItem.Image = (Image)resources.GetObject("abrirToolStripMenuItem.Image");
-            abrirToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            abrirToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.O;
-            abrirToolStripMenuItem.Size = new Size(274, 26);
-            abrirToolStripMenuItem.Text = "&Abrir";
+            this.abrirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("abrirToolStripMenuItem.Image")));
+            this.abrirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            this.abrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.abrirToolStripMenuItem.Text = "&Abrir";
             // 
             // toolStripSeparator
             // 
-            toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(271, 6);
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(271, 6);
             // 
             // guardarToolStripMenuItem
             // 
-            guardarToolStripMenuItem.Image = (Image)resources.GetObject("guardarToolStripMenuItem.Image");
-            guardarToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            guardarToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.S;
-            guardarToolStripMenuItem.Size = new Size(274, 26);
-            guardarToolStripMenuItem.Text = "&Guardar";
+            this.guardarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("guardarToolStripMenuItem.Image")));
+            this.guardarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.guardarToolStripMenuItem.Text = "&Guardar";
             // 
             // guardarcomoToolStripMenuItem
             // 
-            guardarcomoToolStripMenuItem.Name = "guardarcomoToolStripMenuItem";
-            guardarcomoToolStripMenuItem.Size = new Size(274, 26);
-            guardarcomoToolStripMenuItem.Text = "Guardar &como";
+            this.guardarcomoToolStripMenuItem.Name = "guardarcomoToolStripMenuItem";
+            this.guardarcomoToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.guardarcomoToolStripMenuItem.Text = "Guardar &como";
             // 
             // toolStripSeparator1
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(271, 6);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(271, 6);
             // 
             // imprimirToolStripMenuItem
             // 
-            imprimirToolStripMenuItem.Image = (Image)resources.GetObject("imprimirToolStripMenuItem.Image");
-            imprimirToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
-            imprimirToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.P;
-            imprimirToolStripMenuItem.Size = new Size(274, 26);
-            imprimirToolStripMenuItem.Text = "&Imprimir";
+            this.imprimirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("imprimirToolStripMenuItem.Image")));
+            this.imprimirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.imprimirToolStripMenuItem.Name = "imprimirToolStripMenuItem";
+            this.imprimirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.imprimirToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.imprimirToolStripMenuItem.Text = "&Imprimir";
             // 
             // vistapreviadeimpresiónToolStripMenuItem
             // 
-            vistapreviadeimpresiónToolStripMenuItem.Image = (Image)resources.GetObject("vistapreviadeimpresiónToolStripMenuItem.Image");
-            vistapreviadeimpresiónToolStripMenuItem.ImageTransparentColor = Color.Magenta;
-            vistapreviadeimpresiónToolStripMenuItem.Name = "vistapreviadeimpresiónToolStripMenuItem";
-            vistapreviadeimpresiónToolStripMenuItem.Size = new Size(274, 26);
-            vistapreviadeimpresiónToolStripMenuItem.Text = "&Vista previa de impresión";
+            this.vistapreviadeimpresiónToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("vistapreviadeimpresiónToolStripMenuItem.Image")));
+            this.vistapreviadeimpresiónToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.vistapreviadeimpresiónToolStripMenuItem.Name = "vistapreviadeimpresiónToolStripMenuItem";
+            this.vistapreviadeimpresiónToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.vistapreviadeimpresiónToolStripMenuItem.Text = "&Vista previa de impresión";
             // 
             // toolStripSeparator2
             // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(271, 6);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(271, 6);
             // 
             // salirToolStripMenuItem
             // 
-            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(274, 26);
-            salirToolStripMenuItem.Text = "&Salir";
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.salirToolStripMenuItem.Text = "&Salir";
             // 
             // ususariosToolStripMenuItem
             // 
-            ususariosToolStripMenuItem.Image = Properties.Resources.ICONOS_PRESENTACIÓN_23;
-            ususariosToolStripMenuItem.Name = "ususariosToolStripMenuItem";
-            ususariosToolStripMenuItem.Size = new Size(104, 64);
-            ususariosToolStripMenuItem.Text = "Usuarios";
+            this.ususariosToolStripMenuItem.Image = global::Pecera.Properties.Resources.ICONOS_PRESENTACIÓN_23;
+            this.ususariosToolStripMenuItem.Name = "ususariosToolStripMenuItem";
+            this.ususariosToolStripMenuItem.Size = new System.Drawing.Size(104, 64);
+            this.ususariosToolStripMenuItem.Text = "Usuarios";
             // 
             // panel2
             // 
-            panel2.Location = new Point(8, 82);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(92, 533);
-            panel2.TabIndex = 1;
+            this.panel2.Location = new System.Drawing.Point(8, 82);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(92, 533);
+            this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
-            panel3.BackColor = SystemColors.ButtonHighlight;
-            panel3.Controls.Add(label4);
-            panel3.Controls.Add(button1);
-            panel3.Controls.Add(textBox4);
-            panel3.Controls.Add(label3);
-            panel3.Controls.Add(textBox6);
-            panel3.Controls.Add(textBox3);
-            panel3.Controls.Add(label2);
-            panel3.Controls.Add(label6);
-            panel3.Controls.Add(textBox2);
-            panel3.Controls.Add(label7);
-            panel3.Controls.Add(pictureBox2);
-            panel3.Controls.Add(textBox5);
-            panel3.Controls.Add(label5);
-            panel3.Controls.Add(dataGridView1);
-            panel3.Location = new Point(107, 187);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(686, 428);
-            panel3.TabIndex = 2;
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.textBox6);
+            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Location = new System.Drawing.Point(106, 177);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(687, 440);
+            this.panel3.TabIndex = 2;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(161, 275);
-            label4.Name = "label4";
-            label4.Size = new Size(100, 21);
-            label4.TabIndex = 5;
-            label4.Text = "Descripcion";
-            label4.Visible = false;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(123, 173);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 21);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Descripcion";
+            this.label4.Visible = false;
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.Location = new Point(297, 356);
-            button1.Name = "button1";
-            button1.Size = new Size(110, 31);
-            button1.TabIndex = 12;
-            button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = true;
-            button1.Visible = false;
-            button1.Click += button1_Click;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(123, 379);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(110, 31);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(76, 299);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(260, 23);
-            textBox4.TabIndex = 4;
-            textBox4.Visible = false;
+            this.textBox4.Location = new System.Drawing.Point(38, 197);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(260, 23);
+            this.textBox4.TabIndex = 4;
+            this.textBox4.Visible = false;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(170, 202);
-            label3.Name = "label3";
-            label3.Size = new Size(73, 21);
-            label3.TabIndex = 3;
-            label3.Text = "Nombre";
-            label3.Visible = false;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(122, 101);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 21);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Nombre";
+            this.label3.Visible = false;
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(402, 299);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(158, 23);
-            textBox6.TabIndex = 8;
-            textBox6.Visible = false;
-            textBox6.KeyPress += textBox6_KeyPress;
+            this.textBox6.Location = new System.Drawing.Point(38, 329);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(260, 23);
+            this.textBox6.TabIndex = 8;
+            this.textBox6.Visible = false;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(76, 238);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(260, 23);
-            textBox3.TabIndex = 2;
-            textBox3.Visible = false;
+            this.textBox3.Location = new System.Drawing.Point(38, 129);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(260, 23);
+            this.textBox3.TabIndex = 2;
+            this.textBox3.Visible = false;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(156, 59);
-            label2.Name = "label2";
-            label2.Size = new Size(105, 21);
-            label2.TabIndex = 1;
-            label2.Text = "CodigoBarra";
-            label2.Visible = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(122, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(105, 21);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "CodigoBarra";
+            this.label2.Visible = false;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(460, 275);
-            label6.Name = "label6";
-            label6.Size = new Size(58, 21);
-            label6.TabIndex = 9;
-            label6.Text = "Precio";
-            label6.Visible = false;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(130, 302);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 21);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Precio";
+            this.label6.Visible = false;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(76, 93);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(260, 23);
-            textBox2.TabIndex = 0;
-            textBox2.Visible = false;
-            textBox2.KeyPress += textBox2_KeyPress;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(460, 42);
-            label7.Name = "label7";
-            label7.Size = new Size(68, 21);
-            label7.TabIndex = 11;
-            label7.Text = "Imagen";
-            label7.Visible = false;
+            this.textBox2.Location = new System.Drawing.Point(38, 61);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(260, 23);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.Visible = false;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // pictureBox2
             // 
-            pictureBox2.Location = new Point(427, 75);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(140, 116);
-            pictureBox2.TabIndex = 10;
-            pictureBox2.TabStop = false;
-            pictureBox2.Visible = false;
+            this.pictureBox2.ErrorImage = global::Pecera.Properties.Resources.ICONOS_PRESENTACIÓN_36;
+            this.pictureBox2.Image = global::Pecera.Properties.Resources.ICONOS_PRESENTACIÓN_36;
+            this.pictureBox2.Location = new System.Drawing.Point(376, 96);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(240, 226);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(398, 236);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(169, 23);
-            textBox5.TabIndex = 6;
-            textBox5.Visible = false;
+            this.textBox5.Location = new System.Drawing.Point(38, 265);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(260, 23);
+            this.textBox5.TabIndex = 6;
+            this.textBox5.Visible = false;
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(445, 202);
-            label5.Name = "label5";
-            label5.Size = new Size(79, 21);
-            label5.TabIndex = 7;
-            label5.Text = "Cantidad";
-            label5.Visible = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(118, 241);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 21);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Cantidad";
+            this.label5.Visible = false;
             // 
             // dataGridView1
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.NullValue = null;
-            dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.NullValue = null;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(686, 428);
-            dataGridView1.TabIndex = 13;
-            dataGridView1.KeyDown += dataGridView1_KeyDown;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Location = new System.Drawing.Point(0, -3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(687, 443);
+            this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
             // panel4
             // 
-            panel4.Controls.Add(pictureBox1);
-            panel4.Location = new Point(7, 5);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(93, 66);
-            panel4.TabIndex = 3;
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Location = new System.Drawing.Point(7, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(93, 66);
+            this.panel4.TabIndex = 3;
             // 
             // pictureBox1
             // 
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.photo1706556671;
-            pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(93, 66);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::Pecera.Properties.Resources.photo1706556671;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel5
             // 
-            panel5.Controls.Add(button3);
-            panel5.Controls.Add(button2);
-            panel5.Controls.Add(label9);
-            panel5.Controls.Add(textBox7);
-            panel5.Controls.Add(label8);
-            panel5.Controls.Add(label1);
-            panel5.Controls.Add(textBox1);
-            panel5.Location = new Point(107, 83);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(686, 88);
-            panel5.TabIndex = 4;
+            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.button2);
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.textBox7);
+            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.textBox1);
+            this.panel5.Location = new System.Drawing.Point(107, 83);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(686, 88);
+            this.panel5.TabIndex = 4;
             // 
             // button3
             // 
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(508, 19);
-            button3.Name = "button3";
-            button3.Size = new Size(123, 29);
-            button3.TabIndex = 6;
-            button3.Text = "AceptarVenta";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(508, 19);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(123, 29);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "AceptarVenta";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.Location = new Point(350, 19);
-            button2.Name = "button2";
-            button2.Size = new Size(123, 29);
-            button2.TabIndex = 5;
-            button2.Text = "NuevaVenta";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(350, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(123, 29);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "NuevaVenta";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(218, 1);
-            label9.Name = "label9";
-            label9.Size = new Size(79, 21);
-            label9.TabIndex = 4;
-            label9.Text = "Cantidad";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(218, 1);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 21);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Cantidad";
             // 
             // textBox7
             // 
-            textBox7.Location = new Point(240, 25);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(51, 23);
-            textBox7.TabIndex = 3;
-            textBox7.Text = "1";
-            textBox7.TextAlign = HorizontalAlignment.Center;
-            textBox7.KeyPress += textBox1_KeyPress;
+            this.textBox7.Location = new System.Drawing.Point(240, 25);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(51, 23);
+            this.textBox7.TabIndex = 3;
+            this.textBox7.Text = "1";
+            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(251, 63);
-            label8.Name = "label8";
-            label8.Size = new Size(27, 25);
-            label8.TabIndex = 2;
-            label8.Text = "...";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(251, 63);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(27, 25);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "...";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(48, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(109, 21);
-            label1.TabIndex = 1;
-            label1.Text = "Codigo Barra";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(48, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(109, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Codigo Barra";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(19, 25);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(185, 23);
-            textBox1.TabIndex = 0;
-            textBox1.KeyPress += textBox1_KeyPress;
+            this.textBox1.Location = new System.Drawing.Point(19, 25);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(185, 23);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // mySqlCommand1
             // 
-            mySqlCommand1.CacheAge = 0;
-            mySqlCommand1.Connection = null;
-            mySqlCommand1.EnableCaching = false;
-            mySqlCommand1.Transaction = null;
+            this.mySqlCommand1.CacheAge = 0;
+            this.mySqlCommand1.Connection = null;
+            this.mySqlCommand1.EnableCaching = false;
+            this.mySqlCommand1.Transaction = null;
             // 
             // errorProvider1
             // 
-            errorProvider1.ContainerControl = this;
+            this.errorProvider1.ContainerControl = this;
             // 
             // timer1
             // 
-            timer1.Interval = 800;
-            timer1.Tick += timer1_Tick;
+            this.timer1.Interval = 200;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel6
             // 
-            panel6.Controls.Add(groupBox1);
-            panel6.Controls.Add(label16);
-            panel6.Controls.Add(textBox9);
-            panel6.Controls.Add(label11);
-            panel6.Controls.Add(textBox8);
-            panel6.Controls.Add(label10);
-            panel6.Location = new Point(805, 5);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(202, 612);
-            panel6.TabIndex = 5;
+            this.panel6.Controls.Add(this.groupBox1);
+            this.panel6.Controls.Add(this.label16);
+            this.panel6.Controls.Add(this.textBox9);
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Controls.Add(this.textBox8);
+            this.panel6.Controls.Add(this.label10);
+            this.panel6.Location = new System.Drawing.Point(805, 5);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(202, 612);
+            this.panel6.TabIndex = 5;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(label19);
-            groupBox1.Controls.Add(textBox12);
-            groupBox1.Controls.Add(label14);
-            groupBox1.Controls.Add(label18);
-            groupBox1.Controls.Add(textBox13);
-            groupBox1.Controls.Add(label17);
-            groupBox1.Controls.Add(label15);
-            groupBox1.Controls.Add(radioButton3);
-            groupBox1.Controls.Add(radioButton2);
-            groupBox1.Controls.Add(textBox11);
-            groupBox1.Controls.Add(label13);
-            groupBox1.Controls.Add(radioButton1);
-            groupBox1.Controls.Add(textBox10);
-            groupBox1.Controls.Add(label12);
-            groupBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            groupBox1.Location = new Point(6, 7);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(193, 366);
-            groupBox1.TabIndex = 14;
-            groupBox1.TabStop = false;
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.textBox12);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.textBox13);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.radioButton3);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.textBox11);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox1.Location = new System.Drawing.Point(6, 7);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(193, 366);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
             // 
             // label19
             // 
-            label19.AutoSize = true;
-            label19.Location = new Point(130, 338);
-            label19.Name = "label19";
-            label19.Size = new Size(44, 17);
-            label19.TabIndex = 5;
-            label19.Text = "Comb";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(130, 338);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(44, 17);
+            this.label19.TabIndex = 5;
+            this.label19.Text = "Comb";
             // 
             // textBox12
             // 
-            textBox12.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox12.Location = new Point(17, 208);
-            textBox12.Name = "textBox12";
-            textBox12.PlaceholderText = "0.00";
-            textBox12.Size = new Size(164, 33);
-            textBox12.TabIndex = 12;
-            textBox12.Text = "0.00";
-            textBox12.TextAlign = HorizontalAlignment.Center;
-            textBox12.KeyPress += textBox12_KeyPress;
+            this.textBox12.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox12.Location = new System.Drawing.Point(17, 208);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.PlaceholderText = "0.00";
+            this.textBox12.Size = new System.Drawing.Size(164, 33);
+            this.textBox12.TabIndex = 12;
+            this.textBox12.Text = "0.00";
+            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox12.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox12_KeyPress);
             // 
             // label14
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.ForeColor = SystemColors.ButtonHighlight;
-            label14.Location = new Point(51, 248);
-            label14.Name = "label14";
-            label14.Size = new Size(89, 21);
-            label14.TabIndex = 11;
-            label14.Text = "VueltoEn$";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label14.Location = new System.Drawing.Point(51, 248);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(89, 21);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "VueltoEn$";
             // 
             // label18
             // 
-            label18.AutoSize = true;
-            label18.Location = new Point(87, 338);
-            label18.Name = "label18";
-            label18.Size = new Size(15, 17);
-            label18.TabIndex = 4;
-            label18.Text = "$";
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(87, 338);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(15, 17);
+            this.label18.TabIndex = 4;
+            this.label18.Text = "$";
             // 
             // textBox13
             // 
-            textBox13.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox13.Location = new Point(17, 272);
-            textBox13.Name = "textBox13";
-            textBox13.PlaceholderText = "0.00";
-            textBox13.Size = new Size(164, 33);
-            textBox13.TabIndex = 10;
-            textBox13.Text = "0.00";
-            textBox13.TextAlign = HorizontalAlignment.Center;
-            textBox13.KeyPress += textBox13_KeyPress;
+            this.textBox13.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox13.Location = new System.Drawing.Point(17, 272);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.PlaceholderText = "0.00";
+            this.textBox13.Size = new System.Drawing.Size(164, 33);
+            this.textBox13.TabIndex = 10;
+            this.textBox13.Text = "0.00";
+            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox13.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox13_KeyPress);
             // 
             // label17
             // 
-            label17.AutoSize = true;
-            label17.Location = new Point(21, 338);
-            label17.Name = "label17";
-            label17.Size = new Size(22, 17);
-            label17.TabIndex = 3;
-            label17.Text = "Bs";
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(21, 338);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(22, 17);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Bs";
             // 
             // label15
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label15.ForeColor = SystemColors.ButtonHighlight;
-            label15.Location = new Point(51, 184);
-            label15.Name = "label15";
-            label15.Size = new Size(97, 21);
-            label15.TabIndex = 9;
-            label15.Text = "VueltoEnBs";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label15.Location = new System.Drawing.Point(51, 184);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(97, 21);
+            this.label15.TabIndex = 9;
+            this.label15.Text = "VueltoEnBs";
             // 
             // radioButton3
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(145, 320);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(14, 13);
-            radioButton3.TabIndex = 2;
-            radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(145, 320);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(14, 13);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
             // radioButton2
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(87, 320);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(14, 13);
-            radioButton2.TabIndex = 1;
-            radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(87, 320);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(14, 13);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // textBox11
             // 
-            textBox11.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox11.Location = new Point(13, 105);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(164, 33);
-            textBox11.TabIndex = 8;
-            textBox11.Text = "0.00";
-            textBox11.TextAlign = HorizontalAlignment.Center;
-            textBox11.KeyPress += textBox10_KeyPress;
+            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox11.Location = new System.Drawing.Point(13, 105);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(164, 33);
+            this.textBox11.TabIndex = 8;
+            this.textBox11.Text = "0.00";
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox11.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox10_KeyPress);
             // 
             // label13
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.ForeColor = SystemColors.ButtonHighlight;
-            label13.Location = new Point(55, 81);
-            label13.Name = "label13";
-            label13.Size = new Size(77, 21);
-            label13.TabIndex = 7;
-            label13.Text = "PagoEn$";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label13.Location = new System.Drawing.Point(55, 81);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(77, 21);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "PagoEn$";
             // 
             // radioButton1
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Checked = true;
-            radioButton1.Location = new Point(26, 320);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(14, 13);
-            radioButton1.TabIndex = 0;
-            radioButton1.TabStop = true;
-            radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(26, 320);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(14, 13);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // textBox10
             // 
-            textBox10.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox10.Location = new Point(13, 39);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(164, 33);
-            textBox10.TabIndex = 6;
-            textBox10.Text = "0.00";
-            textBox10.TextAlign = HorizontalAlignment.Center;
-            textBox10.KeyPress += textBox10_KeyPress;
-            textBox10.MouseDoubleClick += textBox10_MouseDoubleClick;
+            this.textBox10.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox10.Location = new System.Drawing.Point(13, 39);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(164, 33);
+            this.textBox10.TabIndex = 6;
+            this.textBox10.Text = "0.00";
+            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox10_KeyPress);
             // 
             // label12
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.ForeColor = SystemColors.ButtonHighlight;
-            label12.Location = new Point(51, 15);
-            label12.Name = "label12";
-            label12.Size = new Size(85, 21);
-            label12.TabIndex = 5;
-            label12.Text = "PagoEnBs";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(51, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(85, 21);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "PagoEnBs";
             // 
             // label16
             // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.ForeColor = Color.Yellow;
-            label16.Location = new Point(41, 398);
-            label16.Name = "label16";
-            label16.Size = new Size(54, 30);
-            label16.TabIndex = 13;
-            label16.Text = "Tasa";
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label16.ForeColor = System.Drawing.Color.Yellow;
+            this.label16.Location = new System.Drawing.Point(41, 398);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(54, 30);
+            this.label16.TabIndex = 13;
+            this.label16.Text = "Tasa";
             // 
             // textBox9
             // 
-            textBox9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox9.Location = new Point(6, 574);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(193, 33);
-            textBox9.TabIndex = 4;
-            textBox9.Text = "0.00";
-            textBox9.TextAlign = HorizontalAlignment.Center;
+            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox9.Location = new System.Drawing.Point(6, 574);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(193, 33);
+            this.textBox9.TabIndex = 4;
+            this.textBox9.Text = "0.00";
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = SystemColors.ButtonHighlight;
-            label11.Location = new Point(41, 550);
-            label11.Name = "label11";
-            label11.Size = new Size(115, 21);
-            label11.TabIndex = 3;
-            label11.Text = "MontoTotal_$";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(41, 550);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(115, 21);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "MontoTotal_$";
             // 
             // textBox8
             // 
-            textBox8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox8.Location = new Point(3, 497);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(196, 33);
-            textBox8.TabIndex = 1;
-            textBox8.Text = "0.00";
-            textBox8.TextAlign = HorizontalAlignment.Center;
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox8.Location = new System.Drawing.Point(3, 497);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(196, 33);
+            this.textBox8.TabIndex = 1;
+            this.textBox8.Text = "0.00";
+            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = SystemColors.ButtonHighlight;
-            label10.Location = new Point(41, 473);
-            label10.Name = "label10";
-            label10.Size = new Size(123, 21);
-            label10.TabIndex = 0;
-            label10.Text = "MontoTotal_Bs";
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(41, 473);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(123, 21);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "MontoTotal_Bs";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(459, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 21);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Imagen";
+            this.label7.Visible = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.RoyalBlue;
-            ClientSize = new Size(1022, 647);
-            Controls.Add(panel6);
-            Controls.Add(panel4);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Controls.Add(panel3);
-            Controls.Add(panel5);
-            MainMenuStrip = menuStrip1;
-            Name = "Form1";
-            StartPosition = FormStartPosition.CenterScreen;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ClientSize = new System.Drawing.Size(1022, 647);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel5);
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -853,11 +873,9 @@
         private Label label2;
         private Label label6;
         private TextBox textBox2;
-        private Label label7;
         private PictureBox pictureBox2;
         public TextBox textBox5;
         private Label label5;
-        private DataGridView dataGridView1;
         private ErrorProvider errorProvider1;
         private Label label8;
         private System.Windows.Forms.Timer timer1;
@@ -887,5 +905,7 @@
         private RadioButton radioButton3;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
+        private DataGridView dataGridView1;
+        private Label label7;
     }
 }
