@@ -60,6 +60,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -98,7 +99,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -130,7 +131,8 @@
             this.productosToolStripMenuItem,
             this.ingresarToolStripMenuItem,
             this.archivoToolStripMenuItem,
-            this.ususariosToolStripMenuItem});
+            this.ususariosToolStripMenuItem,
+            this.ventasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
@@ -375,6 +377,17 @@
             this.textBox2.TabIndex = 0;
             this.textBox2.Visible = false;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(459, 49);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 21);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Imagen";
+            this.label7.Visible = false;
             // 
             // pictureBox2
             // 
@@ -791,16 +804,11 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "MontoTotal_Bs";
             // 
-            // label7
+            // ventasToolStripMenuItem
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(459, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 21);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Imagen";
-            this.label7.Visible = false;
+            this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
+            this.ventasToolStripMenuItem.Size = new System.Drawing.Size(73, 64);
+            this.ventasToolStripMenuItem.Text = "Ventas";
             // 
             // Form1
             // 
@@ -907,5 +915,6 @@
         private RadioButton radioButton1;
         private DataGridView dataGridView1;
         private Label label7;
+        private ToolStripMenuItem ventasToolStripMenuItem;
     }
 }
