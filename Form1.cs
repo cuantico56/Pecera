@@ -609,7 +609,7 @@ namespace Pecera
             if (e.KeyChar == (char)Keys.Enter & radioButton3.Checked == true)
             {
 
-                decimal residuo = PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal - (Convert.ToDecimal(textBox13.Text)*tasa);
+                decimal residuo = PagoEnBolivares + (PagoEnDolares * tasa) - MontoTotal - (Convert.ToDecimal(textBox13.Text) * tasa);
 
                 textBox12.Text = residuo.ToString("F2");
 
@@ -659,14 +659,19 @@ namespace Pecera
             CalcularPagos();
         }
 
-            private void timer1_Tick(object sender, EventArgs e)
-            {
-                timer1.Stop();
-                label8.Text = "";
-                textBox1.Text = "";
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+            label8.Text = "";
+            textBox1.Text = "";
 
-            }
+        }
 
-
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteVentas Reportvent = new ReporteVentas();
+            Reportvent.Show();
+            this.Hide();
+        }
     }
 }
